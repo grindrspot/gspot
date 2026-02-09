@@ -1,13 +1,13 @@
 const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
+const sidebar = document.querySelector('.sidebar');
 
-if (navToggle && nav) {
+if (navToggle && sidebar) {
   navToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    sidebar.classList.toggle('open');
   });
 }
 
-const revealEls = document.querySelectorAll('.section, .hero, .info-card, .partner, .timeline-step');
+const revealEls = document.querySelectorAll('.section, .hero, .info-card, .partner, .timeline-step, .hero-media');
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
@@ -24,19 +24,3 @@ revealEls.forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
-
-const heroCard = document.querySelector('.hero-card');
-if (heroCard) {
-  heroCard.addEventListener('mousemove', event => {
-    const rect = heroCard.getBoundingClientRect();
-    const x = event.clientX - rect.left - rect.width / 2;
-    const y = event.clientY - rect.top - rect.height / 2;
-    const rotateX = (y / rect.height) * -8;
-    const rotateY = (x / rect.width) * 8;
-    heroCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  heroCard.addEventListener('mouseleave', () => {
-    heroCard.style.transform = '';
-  });
-}
