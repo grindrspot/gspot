@@ -33,3 +33,21 @@ if (promoBanner && promoClose) {
     promoBanner.classList.add('promo-hidden');
   });
 }
+
+const eventFloat = document.querySelector('.event-float');
+const eventClose = document.querySelector('.event-float-close');
+
+if (eventFloat && eventClose) {
+  eventClose.addEventListener('click', () => {
+    eventFloat.classList.add('hidden');
+  });
+}
+
+const adFloat = document.querySelector('.ad-float');
+const adClose = document.querySelector('.ad-close');
+
+if (adFloat && adClose) {
+  adClose.addEventListener('click', () => {
+    adFloat.classList.add('hidden');
+  });
+}
