@@ -7,7 +7,7 @@ if (navToggle && sidebar) {
   });
 }
 
-const revealEls = document.querySelectorAll('.section, .hero, .info-card, .partner, .timeline-step, .hero-media');
+const revealEls = document.querySelectorAll('.section, .hero, .info-card, .partner-card, .timeline-step, .hero-media');
 const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
@@ -24,3 +24,12 @@ revealEls.forEach(el => {
   el.classList.add('reveal');
   observer.observe(el);
 });
+
+const promoBanner = document.querySelector('.promo-banner');
+const promoClose = document.querySelector('.promo-close');
+
+if (promoBanner && promoClose) {
+  promoClose.addEventListener('click', () => {
+    promoBanner.classList.add('promo-hidden');
+  });
+}
