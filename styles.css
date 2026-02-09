@@ -189,6 +189,24 @@ main {
   letter-spacing: 2px;
 }
 
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.event-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 204, 1, 0.16);
+  border: 1px solid rgba(255, 204, 1, 0.4);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--yellow-soft);
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -395,6 +413,12 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.btn.tiny {
+  padding: 6px 14px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
 .btn.primary {
   background: #1a1a1a;
   color: var(--yellow);
@@ -450,6 +474,12 @@ main {
   gap: 16px;
   flex: 1;
   font-size: 14px;
+}
+
+.promo-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .promo-content p {
@@ -554,5 +584,9 @@ main {
   .promo-content {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .promo-actions {
+    width: 100%;
   }
 }
