@@ -355,6 +355,20 @@ main {
   border-top: 1px solid var(--line);
 }
 
+.credit {
+  margin: 8px 0 0;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+}
+
+.credit a {
+  color: var(--gold-soft);
+}
+
+.credit a:hover {
+  color: var(--gold);
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(30px);
