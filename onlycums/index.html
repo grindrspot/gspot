@@ -3,174 +3,207 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OnlyCUMs Admin Guidebook</title>
+  <title>OnlyCUMs Admin Guidebook | G-Spot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
   <style>
-    :root {
-      --bg: #f6fbff;
-      --card: #ffffff;
-      --ink: #0d1b2a;
-      --muted: #415a77;
-      --brand: #0a84ff;
-      --brand-2: #00b4d8;
-      --ok: #118ab2;
-      --warn: #e76f51;
-      --line: #dbe9f4;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Avenir Next", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--ink);
-      background:
-        radial-gradient(1200px 700px at 10% -20%, #dff4ff 0%, transparent 55%),
-        radial-gradient(1200px 700px at 110% 20%, #d8f8ff 0%, transparent 45%),
-        var(--bg);
-      line-height: 1.5;
-    }
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 18px 72px;
-    }
-    .hero {
-      background: linear-gradient(120deg, var(--brand), var(--brand-2));
-      color: #fff;
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 12px 32px rgba(10, 132, 255, .18);
-    }
-    h1 { margin: 0 0 8px; font-size: 2rem; }
-    h2 { margin: 24px 0 10px; font-size: 1.2rem; }
-    .muted { color: rgba(255,255,255,.92); }
-    .card {
-      margin-top: 16px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 16px;
-      box-shadow: 0 8px 20px rgba(13, 27, 42, .05);
-    }
-    .grid {
+    .guide-hero {
+      padding: 56px 6vw 24px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 14px;
+      gap: 22px;
     }
-    code {
-      background: #eef6ff;
-      border: 1px solid #d9e9fb;
-      padding: 2px 7px;
-      border-radius: 7px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .92rem;
+    .guide-title {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-family: "Bebas Neue", sans-serif;
+      letter-spacing: 1px;
+      line-height: 0.95;
     }
-    ul { margin: 8px 0 0; padding-left: 18px; }
-    .pill {
-      display: inline-block;
-      background: #e8f7ff;
-      border: 1px solid #c7ebff;
-      color: #0b4f6c;
-      font-size: .8rem;
-      padding: 4px 8px;
+    .guide-lead {
+      margin: 0;
+      max-width: 840px;
+      color: var(--muted);
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .meta-pill {
+      border: 1px solid rgba(255, 204, 1, 0.45);
+      color: var(--yellow-soft);
+      background: rgba(255, 204, 1, 0.07);
       border-radius: 999px;
-      margin-right: 6px;
-      margin-bottom: 6px;
+      padding: 5px 10px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      font-weight: 700;
     }
-    .warn {
-      border-left: 4px solid var(--warn);
-      padding-left: 10px;
-      color: #7f1d1d;
-      margin-top: 8px;
+    .guide-grid {
+      padding: 8px 6vw 70px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
     }
-    .ok {
-      border-left: 4px solid var(--ok);
-      padding-left: 10px;
-      color: #0b525b;
-      margin-top: 8px;
+    .guide-card {
+      background: linear-gradient(160deg, rgba(26, 26, 26, 0.95), rgba(18, 18, 18, 0.92));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow);
     }
-    a { color: #0057b8; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    .guide-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+    .guide-card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .guide-card li { margin: 7px 0; }
+    .guide-card code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .92em;
+      background: rgba(255, 204, 1, 0.12);
+      border: 1px solid rgba(255, 204, 1, 0.25);
+      padding: 1px 6px;
+      border-radius: 6px;
+      color: var(--yellow-soft);
+    }
+    .guide-card.wide { grid-column: 1 / -1; }
+    .credit-strip {
+      margin-top: 10px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 204, 1, 0.35);
+      background: rgba(255, 204, 1, 0.08);
+      color: #fff2bf;
+    }
+    .credit-strip a { color: #ffe68a; text-decoration: underline; }
+    @media (max-width: 980px) {
+      .guide-hero { padding-top: 32px; }
+    }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="hero">
-      <h1>OnlyCUMs Admin Guidebook</h1>
-      <p class="muted">Operations manual for moderators and owners of <code>@OnlyCums_topverbot</code>.</p>
-      <div>
-        <span class="pill">Updated: March 6, 2026</span>
-        <span class="pill">Owners: 8488339614, 6006722117</span>
-        <span class="pill">Review Chat: -1003745386694</span>
+  <div class="grain"></div>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="../assets/gspotlogo.jpg" alt="G-Spot logo" />
       </div>
-    </section>
+      <nav class="side-nav">
+        <a class="side-link" href="../index.html">Home</a>
+        <a class="side-link" href="../about.html">About & Community</a>
+        <a class="side-link" href="../partners.html">Partnerships & Contact</a>
+        <a class="side-link" href="../events.html">Events</a>
+        <a class="side-link" href="../builder.html">Website Builder</a>
+        <a class="side-link active" href="./index.html">OnlyCUMs Admin Guide</a>
+      </nav>
+      <div class="side-meta">
+        <p>Operations guide for OnlyCUMs moderators and owners.</p>
+        <a class="btn primary" href="https://t.me/OnlyCums_topverbot" target="_blank" rel="noreferrer">Open Verification Bot</a>
+      </div>
+    </aside>
 
-    <section class="card">
-      <h2>1. Verification Workflow</h2>
-      <ul>
-        <li>User sends <code>/start</code> and must tap <code>✅ I Agree</code> to continue.</li>
-        <li>User submits username, birth year (must be 18+), then live selfie via Mini App camera.</li>
-        <li>Submission goes to admin review chat with Approve/Reject controls.</li>
-        <li>On approval: user receives one-time invite link and guidelines; group gets welcome post + guidelines.</li>
-      </ul>
-    </section>
+    <div class="content">
+      <header class="top-rail">
+        <span class="badge">Guidebook</span>
+        <p>Credits: <a href="https://gspot.world" target="_blank" rel="noreferrer">Gspot.world</a> + <a href="https://jcit.digital" target="_blank" rel="noreferrer">JCIT Services</a>.</p>
+        <a class="btn tiny" href="https://jcit.digital" target="_blank" rel="noreferrer">Contact JCIT</a>
+        <button class="nav-toggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </header>
 
-    <section class="grid">
-      <article class="card">
-        <h2>2. User Commands</h2>
-        <ul>
-          <li><code>/start</code> start verification</li>
-          <li><code>/status</code> check verification status</li>
-          <li><code>/openapp</code> open mini app dashboard</li>
-          <li><code>/menu</code> quick action buttons</li>
-          <li><code>/help</code> list commands</li>
-          <li><code>/myid</code> show Telegram ID + admin access</li>
-        </ul>
-      </article>
+      <main>
+        <section class="guide-hero">
+          <p class="eyebrow">OnlyCUMs Verification Operations</p>
+          <h1 class="guide-title">Admin Guidebook</h1>
+          <p class="guide-lead">Use this manual for daily moderation, approvals, escalation, and bot troubleshooting. This page mirrors the core G-Spot visual system for a consistent operator experience.</p>
+          <div class="meta-row">
+            <span class="meta-pill">Owners: 8488339614, 6006722117</span>
+            <span class="meta-pill">Review Chat: -1003745386694</span>
+            <span class="meta-pill">Max Re-Verify: 5</span>
+          </div>
+        </section>
 
-      <article class="card">
-        <h2>3. Admin Commands</h2>
-        <ul>
-          <li><code>/ban &lt;user_id&gt; [reason]</code></li>
-          <li><code>/unban &lt;user_id&gt;</code></li>
-          <li><code>/broadcast_group &lt;message&gt;</code></li>
-          <li><code>/broadcast_all &lt;message&gt;</code></li>
-          <li><code>/export_ids</code></li>
-          <li><code>/clear_pending</code></li>
-          <li><code>/addadmin &lt;user_id&gt;</code></li>
-          <li><code>/removeadmin &lt;user_id&gt;</code></li>
-          <li><code>/admins</code></li>
-        </ul>
-      </article>
-    </section>
+        <section class="guide-grid">
+          <article class="guide-card">
+            <h2>Verification Flow</h2>
+            <ul>
+              <li>User sends <code>/start</code> and taps <code>✅ I Agree</code>.</li>
+              <li>Collect username, birth year (must be 18+), and live selfie.</li>
+              <li>Submission appears in admin review chat and panel.</li>
+              <li>Approve sends one-time invite link and guidelines automatically.</li>
+            </ul>
+          </article>
 
-    <section class="card">
-      <h2>4. Moderation Rules</h2>
-      <ul>
-        <li>No spamming or flooding.</li>
-        <li>No reporting the group.</li>
-        <li>No child sexual content (zero tolerance, immediate ban).</li>
-        <li>Respect admins and members.</li>
-      </ul>
-      <p class="ok">Tip: Keep moderation decisions consistent. Reject unclear/fake submissions and ask user to re-submit.</p>
-    </section>
+          <article class="guide-card">
+            <h2>User Commands</h2>
+            <ul>
+              <li><code>/start</code> Start verification</li>
+              <li><code>/status</code> Check review status</li>
+              <li><code>/openapp</code> Open mini app</li>
+              <li><code>/menu</code> Show quick buttons</li>
+              <li><code>/myid</code> Show Telegram ID</li>
+              <li><code>/help</code> Command list</li>
+            </ul>
+          </article>
 
-    <section class="card">
-      <h2>5. Troubleshooting</h2>
-      <ul>
-        <li>Bot no response: verify webhook and web app runtime on PythonAnywhere.</li>
-        <li>Admin review chat unreachable: ensure bot is in review chat and has posting rights.</li>
-        <li>Users bypassing invite: rely on one-time links and auto-kick for non-approved joins.</li>
-      </ul>
-      <p class="warn">Security: rotate bot token immediately if shared publicly.</p>
-    </section>
+          <article class="guide-card">
+            <h2>Admin Commands</h2>
+            <ul>
+              <li><code>/ban &lt;user_id&gt; [reason]</code></li>
+              <li><code>/unban &lt;user_id&gt;</code></li>
+              <li><code>/broadcast_group &lt;message&gt;</code></li>
+              <li><code>/broadcast_all &lt;message&gt;</code></li>
+              <li><code>/export_ids</code></li>
+              <li><code>/clear_pending</code></li>
+              <li><code>/addadmin &lt;user_id&gt;</code></li>
+              <li><code>/removeadmin &lt;user_id&gt;</code></li>
+              <li><code>/admins</code></li>
+            </ul>
+          </article>
 
-    <section class="card">
-      <h2>6. Links</h2>
-      <ul>
-        <li>Bot: <a href="https://t.me/OnlyCums_topverbot">t.me/OnlyCums_topverbot</a></li>
-        <li>Mini App: <a href="https://jakeconcha.pythonanywhere.com">jakeconcha.pythonanywhere.com</a></li>
-        <li>Group: <a href="https://t.me/+j3mcpbwOkQ5kMTQx">Join Link</a></li>
-      </ul>
-    </section>
-  </main>
+          <article class="guide-card">
+            <h2>Community Rules</h2>
+            <ul>
+              <li>No spamming or flooding.</li>
+              <li>No reporting the group.</li>
+              <li>No child sexual content (instant ban).</li>
+              <li>Respect admins and members.</li>
+            </ul>
+          </article>
+
+          <article class="guide-card wide">
+            <h2>Troubleshooting and Escalation</h2>
+            <ul>
+              <li>If bot is silent, check webhook status and PythonAnywhere web app reload.</li>
+              <li>If submissions fail to reach review chat, confirm bot membership/permissions in <code>-1003745386694</code>.</li>
+              <li>If unapproved users enter group, verify auto-kick is enabled and bot is group admin.</li>
+              <li>If invite links are abused, keep one-time links and short expiry enabled.</li>
+            </ul>
+            <div class="credit-strip">
+              <strong>Credits:</strong> Powered by <a href="https://gspot.world" target="_blank" rel="noreferrer">Gspot.world</a> and <a href="https://jcit.digital" target="_blank" rel="noreferrer">JCIT Services</a>.<br />
+              <strong>Want the same bot?</strong> Contact <a href="https://jcit.digital" target="_blank" rel="noreferrer">JCIT Services now</a>.
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>OnlyCUMs Admin Guidebook.</p>
+        <p class="credit">Credits: <a href="https://jcit.digital" target="_blank" rel="noreferrer">JCIT Services</a> and <a href="https://gspot.world" target="_blank" rel="noreferrer">Gspot.world</a>.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+  <script src="../background.js"></script>
 </body>
 </html>
