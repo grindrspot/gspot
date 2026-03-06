@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OnlyCUMs Admin Guidebook</title>
+  <style>
+    :root {
+      --bg: #f6fbff;
+      --card: #ffffff;
+      --ink: #0d1b2a;
+      --muted: #415a77;
+      --brand: #0a84ff;
+      --brand-2: #00b4d8;
+      --ok: #118ab2;
+      --warn: #e76f51;
+      --line: #dbe9f4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 700px at 10% -20%, #dff4ff 0%, transparent 55%),
+        radial-gradient(1200px 700px at 110% 20%, #d8f8ff 0%, transparent 45%),
+        var(--bg);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 72px;
+    }
+    .hero {
+      background: linear-gradient(120deg, var(--brand), var(--brand-2));
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 12px 32px rgba(10, 132, 255, .18);
+    }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    h2 { margin: 24px 0 10px; font-size: 1.2rem; }
+    .muted { color: rgba(255,255,255,.92); }
+    .card {
+      margin-top: 16px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 8px 20px rgba(13, 27, 42, .05);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+    code {
+      background: #eef6ff;
+      border: 1px solid #d9e9fb;
+      padding: 2px 7px;
+      border-radius: 7px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .92rem;
+    }
+    ul { margin: 8px 0 0; padding-left: 18px; }
+    .pill {
+      display: inline-block;
+      background: #e8f7ff;
+      border: 1px solid #c7ebff;
+      color: #0b4f6c;
+      font-size: .8rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .warn {
+      border-left: 4px solid var(--warn);
+      padding-left: 10px;
+      color: #7f1d1d;
+      margin-top: 8px;
+    }
+    .ok {
+      border-left: 4px solid var(--ok);
+      padding-left: 10px;
+      color: #0b525b;
+      margin-top: 8px;
+    }
+    a { color: #0057b8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>OnlyCUMs Admin Guidebook</h1>
+      <p class="muted">Operations manual for moderators and owners of <code>@OnlyCums_topverbot</code>.</p>
+      <div>
+        <span class="pill">Updated: March 6, 2026</span>
+        <span class="pill">Owners: 8488339614, 6006722117</span>
+        <span class="pill">Review Chat: -1003745386694</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. Verification Workflow</h2>
+      <ul>
+        <li>User sends <code>/start</code> and must tap <code>✅ I Agree</code> to continue.</li>
+        <li>User submits username, birth year (must be 18+), then live selfie via Mini App camera.</li>
+        <li>Submission goes to admin review chat with Approve/Reject controls.</li>
+        <li>On approval: user receives one-time invite link and guidelines; group gets welcome post + guidelines.</li>
+      </ul>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>2. User Commands</h2>
+        <ul>
+          <li><code>/start</code> start verification</li>
+          <li><code>/status</code> check verification status</li>
+          <li><code>/openapp</code> open mini app dashboard</li>
+          <li><code>/menu</code> quick action buttons</li>
+          <li><code>/help</code> list commands</li>
+          <li><code>/myid</code> show Telegram ID + admin access</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>3. Admin Commands</h2>
+        <ul>
+          <li><code>/ban &lt;user_id&gt; [reason]</code></li>
+          <li><code>/unban &lt;user_id&gt;</code></li>
+          <li><code>/broadcast_group &lt;message&gt;</code></li>
+          <li><code>/broadcast_all &lt;message&gt;</code></li>
+          <li><code>/export_ids</code></li>
+          <li><code>/clear_pending</code></li>
+          <li><code>/addadmin &lt;user_id&gt;</code></li>
+          <li><code>/removeadmin &lt;user_id&gt;</code></li>
+          <li><code>/admins</code></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>4. Moderation Rules</h2>
+      <ul>
+        <li>No spamming or flooding.</li>
+        <li>No reporting the group.</li>
+        <li>No child sexual content (zero tolerance, immediate ban).</li>
+        <li>Respect admins and members.</li>
+      </ul>
+      <p class="ok">Tip: Keep moderation decisions consistent. Reject unclear/fake submissions and ask user to re-submit.</p>
+    </section>
+
+    <section class="card">
+      <h2>5. Troubleshooting</h2>
+      <ul>
+        <li>Bot no response: verify webhook and web app runtime on PythonAnywhere.</li>
+        <li>Admin review chat unreachable: ensure bot is in review chat and has posting rights.</li>
+        <li>Users bypassing invite: rely on one-time links and auto-kick for non-approved joins.</li>
+      </ul>
+      <p class="warn">Security: rotate bot token immediately if shared publicly.</p>
+    </section>
+
+    <section class="card">
+      <h2>6. Links</h2>
+      <ul>
+        <li>Bot: <a href="https://t.me/OnlyCums_topverbot">t.me/OnlyCums_topverbot</a></li>
+        <li>Mini App: <a href="https://jakeconcha.pythonanywhere.com">jakeconcha.pythonanywhere.com</a></li>
+        <li>Group: <a href="https://t.me/+j3mcpbwOkQ5kMTQx">Join Link</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
