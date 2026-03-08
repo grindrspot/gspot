@@ -9,93 +9,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
   <style>
-    .guide-hero {
-      padding: 56px 6vw 24px;
-      display: grid;
-      gap: 22px;
-    }
-    .guide-title {
-      margin: 0;
-      font-size: clamp(2rem, 6vw, 4rem);
-      font-family: "Bebas Neue", sans-serif;
-      letter-spacing: 1px;
-      line-height: 0.95;
-    }
-    .guide-lead {
-      margin: 0;
-      max-width: 840px;
-      color: var(--muted);
-    }
-    .meta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .meta-pill {
-      border: 1px solid rgba(255, 204, 1, 0.45);
-      color: var(--yellow-soft);
-      background: rgba(255, 204, 1, 0.07);
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .8px;
-      font-weight: 700;
-    }
-    .guide-grid {
-      padding: 8px 6vw 70px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .guide-card {
-      background: linear-gradient(160deg, rgba(26, 26, 26, 0.95), rgba(18, 18, 18, 0.92));
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: var(--radius-lg);
-      padding: 20px;
-      box-shadow: var(--shadow);
-    }
-    .guide-card h2 {
-      margin: 0 0 8px;
-      font-size: 1.2rem;
-    }
-    .guide-card ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-    }
+    .guide-hero { padding: 56px 6vw 24px; display: grid; gap: 22px; }
+    .guide-title { margin: 0; font-size: clamp(2rem, 6vw, 4rem); font-family: "Bebas Neue", sans-serif; letter-spacing: 1px; line-height: .95; }
+    .guide-lead { margin: 0; max-width: 840px; color: var(--muted); }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .meta-pill { border: 1px solid rgba(255, 204, 1, .45); color: var(--yellow-soft); background: rgba(255, 204, 1, .07); border-radius: 999px; padding: 5px 10px; font-size: 12px; text-transform: uppercase; letter-spacing: .8px; font-weight: 700; }
+    .guide-grid { padding: 8px 6vw 70px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .guide-card { background: linear-gradient(160deg, rgba(26, 26, 26, .95), rgba(18, 18, 18, .92)); border: 1px solid rgba(255, 255, 255, .08); border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow); }
+    .guide-card h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    .guide-card ul { margin: 0; padding-left: 18px; color: var(--muted); }
     .guide-card li { margin: 7px 0; }
-    .guide-card code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .92em;
-      background: rgba(255, 204, 1, 0.12);
-      border: 1px solid rgba(255, 204, 1, 0.25);
-      padding: 1px 6px;
-      border-radius: 6px;
-      color: var(--yellow-soft);
-    }
+    .guide-card code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; background: rgba(255, 204, 1, .12); border: 1px solid rgba(255, 204, 1, .25); padding: 1px 6px; border-radius: 6px; color: var(--yellow-soft); }
     .guide-card.wide { grid-column: 1 / -1; }
-    .credit-strip {
-      margin-top: 10px;
-      padding: 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 204, 1, 0.35);
-      background: rgba(255, 204, 1, 0.08);
-      color: #fff2bf;
-    }
+    .credit-strip { margin-top: 10px; padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 204, 1, .35); background: rgba(255, 204, 1, .08); color: #fff2bf; }
     .credit-strip a { color: #ffe68a; text-decoration: underline; }
-    @media (max-width: 980px) {
-      .guide-hero { padding-top: 32px; }
-    }
+    @media (max-width: 980px) { .guide-hero { padding-top: 32px; } }
   </style>
 </head>
 <body>
   <div class="grain"></div>
   <div class="layout">
     <aside class="sidebar">
-      <div class="brand">
-        <img class="brand-logo" src="../assets/gspotlogo.jpg" alt="G-Spot logo" />
-      </div>
+      <div class="brand"><img class="brand-logo" src="../assets/gspotlogo.jpg" alt="G-Spot logo" /></div>
       <nav class="side-nav">
         <a class="side-link" href="../index.html">Home</a>
         <a class="side-link" href="../about.html">About & Community</a>
@@ -115,20 +50,19 @@
         <span class="badge">Guidebook</span>
         <p>Credits: <a href="https://gspot.world" target="_blank" rel="noreferrer">Gspot.world</a> + <a href="https://jcit.digital" target="_blank" rel="noreferrer">JCIT Services</a>.</p>
         <a class="btn tiny" href="https://jcit.digital" target="_blank" rel="noreferrer">Contact JCIT</a>
-        <button class="nav-toggle" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
       </header>
 
       <main>
         <section class="guide-hero">
           <p class="eyebrow">OnlyCUMs Verification Operations</p>
           <h1 class="guide-title">Admin Guidebook</h1>
-          <p class="guide-lead">Use this manual for daily moderation, approvals, escalation, and bot troubleshooting. This page mirrors the core G-Spot visual system for a consistent operator experience.</p>
+          <p class="guide-lead">Reference for moderation, verification approvals, invite control, trust scoring, and daily activity automation.</p>
           <div class="meta-row">
             <span class="meta-pill">Owners: 8488339614, 6006722117</span>
             <span class="meta-pill">Review Chat: -1003745386694</span>
             <span class="meta-pill">Max Re-Verify: 5</span>
+            <span class="meta-pill">Leaderboard: 9:00 PM PHT</span>
           </div>
         </section>
 
@@ -137,56 +71,57 @@
             <h2>Verification Flow</h2>
             <ul>
               <li>User sends <code>/start</code> and taps <code>✅ I Agree</code>.</li>
-              <li>Collect username, birth year (must be 18+), and live selfie.</li>
-              <li>Submission appears in admin review chat and panel.</li>
-              <li>Approve sends one-time invite link and guidelines automatically.</li>
+              <li>User submits username, birth year (18+), then live selfie via mini app.</li>
+              <li>Admin gets review item with approve/reject reason actions.</li>
+              <li>Approval sends one-time invite link and posts in group.</li>
             </ul>
           </article>
 
           <article class="guide-card">
             <h2>User Commands</h2>
             <ul>
-              <li><code>/start</code> Start verification</li>
-              <li><code>/status</code> Check review status</li>
-              <li><code>/openapp</code> Open mini app</li>
-              <li><code>/menu</code> Show quick buttons</li>
-              <li><code>/myid</code> Show Telegram ID</li>
-              <li><code>/help</code> Command list</li>
+              <li><code>/start</code>, <code>/onboarding</code>, <code>/status</code>, <code>/openapp</code></li>
+              <li><code>/menu</code>, <code>/myid</code>, <code>/help</code>, <code>/cancel</code></li>
             </ul>
           </article>
 
           <article class="guide-card">
             <h2>Admin Commands</h2>
             <ul>
-              <li><code>/ban &lt;user_id&gt; [reason]</code></li>
-              <li><code>/unban &lt;user_id&gt;</code></li>
-              <li><code>/broadcast_group &lt;message&gt;</code></li>
-              <li><code>/broadcast_all &lt;message&gt;</code></li>
-              <li><code>/export_ids</code></li>
-              <li><code>/clear_pending</code></li>
-              <li><code>/addadmin &lt;user_id&gt;</code></li>
-              <li><code>/removeadmin &lt;user_id&gt;</code></li>
-              <li><code>/admins</code></li>
+              <li><code>/admin</code>, <code>/analytics</code>, <code>/digest</code>, <code>/toptoday</code></li>
+              <li><code>/sendbroadcast</code>, <code>/broadcast_all</code>, <code>/broadcast_group</code></li>
+              <li><code>/resendinvite &lt;user_id|@username&gt;</code></li>
+              <li><code>/clear_pending</code>, <code>/export_ids</code></li>
+              <li><code>/addadmin &lt;user_id|@username&gt;</code>, <code>/removeadmin &lt;user_id&gt;</code>, <code>/admins</code></li>
+              <li><code>/ban</code>, <code>/unban</code>, <code>/cancelmode</code></li>
             </ul>
           </article>
 
           <article class="guide-card">
-            <h2>Community Rules</h2>
+            <h2>Trust Scoring</h2>
             <ul>
-              <li>No spamming or flooding.</li>
-              <li>No reporting the group.</li>
-              <li>No child sexual content (instant ban).</li>
-              <li>Respect admins and members.</li>
+              <li>Each pending user gets a trust score (0-100) with risk level.</li>
+              <li>Shown in admin queue and verification request details.</li>
+              <li>Factors include username quality, status history, submission behavior, bans.</li>
+            </ul>
+          </article>
+
+          <article class="guide-card">
+            <h2>Automations</h2>
+            <ul>
+              <li><strong>Daily leaderboard:</strong> posts top active chatters at <code>9:00 PM PHT</code>.</li>
+              <li>Leaderboard includes both Telegram profile photos and latest verification photos when available.</li>
+              <li><strong>Weekly digest:</strong> submission/approval/rejection/pending metrics to admin review chat.</li>
             </ul>
           </article>
 
           <article class="guide-card wide">
-            <h2>Troubleshooting and Escalation</h2>
+            <h2>Troubleshooting</h2>
             <ul>
-              <li>If bot is silent, check webhook status and PythonAnywhere web app reload.</li>
-              <li>If submissions fail to reach review chat, confirm bot membership/permissions in <code>-1003745386694</code>.</li>
-              <li>If unapproved users enter group, verify auto-kick is enabled and bot is group admin.</li>
-              <li>If invite links are abused, keep one-time links and short expiry enabled.</li>
+              <li>Bot no response: check webhook status and reload PythonAnywhere web app.</li>
+              <li>Approve/reject issue: verify callback buttons on newest pending item.</li>
+              <li>Invite failures: use <code>/resendinvite</code> and ensure user has started bot chat.</li>
+              <li>Broadcast partial failures: blocked users return 403 and are counted as failed deliveries.</li>
             </ul>
             <div class="credit-strip">
               <strong>Credits:</strong> Powered by <a href="https://gspot.world" target="_blank" rel="noreferrer">Gspot.world</a> and <a href="https://jcit.digital" target="_blank" rel="noreferrer">JCIT Services</a>.<br />
